@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina mea de bază</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bun venit pe pagina mea!</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Despre mine</h2>
+            <p>Aceasta este o pagină simplă de HTML. În acest spațiu, poți adăuga conținut relevant despre tine sau despre proiectul tău.</p>
+        </section>
+
+        <section>
+            <h2>Serviciile noastre</h2>
+            <ul>
+                <li>Serviciul 1</li>
+                <li>Serviciul 2</li>
+                <li>Serviciul 3</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Galerie</h2>
+            <img src="imagine.jpg" alt="Imagine de exemplu" width="300">
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Poți lua legătura cu noi la <a href="mailto:contact@exemplu.com">contact@exemplu.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>

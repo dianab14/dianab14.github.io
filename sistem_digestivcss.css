@@ -1,0 +1,295 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+}
+
+.header 
+{
+    height: 100vh;
+    background: url('img/backgrounddigestie.png') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay 
+{
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn 
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.overlay h1 
+{
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.overlay p 
+{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.overlay .cta 
+{
+    padding: 10px 20px;
+    background: #73a8ef;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.overlay .cta:hover 
+{
+    background: #73a8ef;
+}
+
+/* Introducere */
+.intro 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.intro .text h2 
+{
+    font-size: 2rem;
+    color: #73a8ef;
+    margin-bottom: 15px;
+}
+
+
+
+/* Organe Principale - Grid */
+.organe-principale 
+{
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.organe-principale h2 
+{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #73a8ef;
+}
+
+.grid-container 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.organ 
+{
+    padding: 20px;
+    background: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.5s ease;
+}
+
+
+.organ:hover 
+{
+    transform: translateY(-10px);
+    background-color: #d0e3f8;
+}
+
+.organ h3 
+{
+    color: #73a8ef;
+    margin-bottom: 10px;
+}
+
+/* Proces animat */
+.proces-animat 
+{
+    text-align: center;
+    padding: 40px 20px;
+    background: #73a8ef;
+    color: white;
+}
+
+.animare-container 
+{
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.digestie
+{
+    width: 130%;
+    height: 160%;
+    position: absolute;
+    top: -110px;
+    left: -55px;
+    z-index: 0;
+}
+
+img 
+{
+    display: block;
+}
+
+.food 
+{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveAlong 5s linear infinite;
+    z-index: 1;
+}
+
+@keyframes moveAlong 
+{
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/*Footer*/
+.footer 
+{
+    background: #112949;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*Responsive*/
+
+
+/*Desktop*/
+@media (min-width: 1024px) 
+{
+    .header 
+    {
+        height: 100vh;
+        background-position: center center;
+    }
+
+    .intro 
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+    .intro .video iframe 
+    {
+        width: 100%;
+    }
+}
+
+/*Tablete*/
+@media (min-width: 768px) and (max-width: 1023px) 
+{
+    
+    .header 
+    {
+        background-size: contain;
+        background-position: center center;   
+        background-color: #112949;
+    }
+    .header h1 
+    {
+        font-size: 2.5rem;
+    }
+
+    .overlay p 
+    {
+        font-size: 1rem;
+    }
+
+    .intro 
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .intro .text h2 
+    {
+        font-size: 1.8rem;
+    }
+    
+}
+
+/*Telefon*/
+@media (max-width: 767px) 
+{
+    .header 
+    {
+        height: auto;
+        padding: 20px;
+    }
+
+    .overlay 
+    {
+        padding: 10px;
+    }
+
+    .overlay h1 
+    {
+        font-size: 2rem;
+    }
+
+    .overlay p 
+    {
+        font-size: 0.9rem;
+    }
+
+    .overlay .cta 
+    {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+
+    }
+
+    .intro 
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .intro .video iframe 
+    {
+        width: 100%;
+        height: auto;
+    }
+  
+}
